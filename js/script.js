@@ -1,8 +1,5 @@
-# script.js
-
-```javascript
 /* ========================================
-   MENU MOBILE
+   MOBILE MENU
 ======================================== */
 
 const menuButton = document.getElementById("menu-button");
@@ -18,8 +15,7 @@ menuButton.addEventListener("click", () => {
 
 
 /* ========================================
-   FECHAR MENU MOBILE
-   AO CLICAR EM UM LINK
+   CLOSE MOBILE MENU ON LINK CLICK
 ======================================== */
 
 const mobileLinks =
@@ -38,7 +34,7 @@ mobileLinks.forEach(link => {
 
 
 /* ========================================
-   HEADER AO ROLAR A PÁGINA
+   HEADER ON SCROLL
 ======================================== */
 
 const header =
@@ -61,7 +57,7 @@ window.addEventListener("scroll", () => {
 
 
 /* ========================================
-   ANIMAÇÃO DAS SEÇÕES
+   SECTION REVEAL ANIMATION
 ======================================== */
 
 const observer =
@@ -80,173 +76,15 @@ const observer =
 
         },
         {
-            threshold: 0.15
+            threshold: 0.1
         }
     );
 
+const reveals =
+    document.querySelectorAll(".reveal");
 
-/* ========================================
-   ELEMENTOS PARA ANIMAÇÃO
-======================================== */
-
-const elements =
-    document.querySelectorAll(
-        ".section-title, .skill-card, .experience-item, .project-card"
-    );
-
-
-elements.forEach(element => {
-
-    element.classList.add("reveal");
+reveals.forEach(element => {
 
     observer.observe(element);
 
 });
-
-
-/* ========================================
-   ANO AUTOMÁTICO NO FOOTER
-======================================== */
-
-const currentYear =
-    new Date().getFullYear();
-
-const footerYear =
-    document.querySelector(".footer-year");
-
-
-if (footerYear) {
-
-    footerYear.textContent = currentYear;
-
-}
-
-
-/* ========================================
-   EFEITO DE DIGITAÇÃO
-======================================== */
-
-const typingElement =
-    document.querySelector(".typing");
-
-
-if (typingElement) {
-
-    const texts = [
-        "Desenvolvedor Java.",
-        "Desenvolvedor Web.",
-        "Entusiasta de IA.",
-        "Criador de soluções."
-    ];
-
-    let textIndex = 0;
-
-    let characterIndex = 0;
-
-    let deleting = false;
-
-
-    function typeEffect() {
-
-        const currentText =
-            texts[textIndex];
-
-
-        if (!deleting) {
-
-            typingElement.textContent =
-                currentText.substring(
-                    0,
-                    characterIndex + 1
-                );
-
-            characterIndex++;
-
-
-            if (characterIndex === currentText.length) {
-
-                deleting = true;
-
-                setTimeout(typeEffect, 1800);
-
-                return;
-
-            }
-
-        } else {
-
-            typingElement.textContent =
-                currentText.substring(
-                    0,
-                    characterIndex - 1
-                );
-
-            characterIndex--;
-
-
-            if (characterIndex === 0) {
-
-                deleting = false;
-
-                textIndex =
-                    (textIndex + 1) % texts.length;
-
-            }
-
-        }
-
-
-        setTimeout(
-            typeEffect,
-            deleting ? 50 : 90
-        );
-
-    }
-
-
-    typeEffect();
-
-}
-
-
-/* ========================================
-   LINKS INTERNOS
-======================================== */
-
-document
-    .querySelectorAll('a[href^="#"]')
-    .forEach(anchor => {
-
-        anchor.addEventListener("click", function (event) {
-
-            const targetId =
-                this.getAttribute("href");
-
-
-            if (
-                targetId === "#" ||
-                !targetId
-            ) {
-                return;
-            }
-
-
-            const target =
-                document.querySelector(targetId);
-
-
-            if (target) {
-
-                event.preventDefault();
-
-
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-            }
-
-        });
-
-    });
-```
