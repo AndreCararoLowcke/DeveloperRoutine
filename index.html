@@ -1,0 +1,924 @@
+# index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Portfólio de André Cararo Lowcke - Desenvolvedor Java, Web e Tecnologia."
+    >
+
+    <meta name="author" content="André Cararo Lowcke">
+
+    <title>André Cararo Lowcke | Desenvolvedor</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: "#0a192f",
+                        navyLight: "#112240",
+                        slateCustom: "#8892b0",
+                        lightCustom: "#ccd6f6",
+                        greenCustom: "#64ffda"
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- CSS próprio -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body class="bg-navy text-lightCustom">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header
+        id="header"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+
+        <nav class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+
+            <!-- Logo -->
+
+            <a
+                href="#inicio"
+                class="text-greenCustom font-code text-xl font-bold"
+            >
+                &lt;ACL /&gt;
+            </a>
+
+
+            <!-- Desktop Menu -->
+
+            <div class="hidden md:flex items-center gap-8">
+
+                <a href="#sobre" class="nav-link">
+                    <span>01.</span> Sobre
+                </a>
+
+                <a href="#habilidades" class="nav-link">
+                    <span>02.</span> Habilidades
+                </a>
+
+                <a href="#experiencia" class="nav-link">
+                    <span>03.</span> Experiência
+                </a>
+
+                <a href="#projetos" class="nav-link">
+                    <span>04.</span> Projetos
+                </a>
+
+                <a href="#contato" class="nav-link">
+                    <span>05.</span> Contato
+                </a>
+
+                <a
+                    href="assets/cv.pdf"
+                    target="_blank"
+                    class="resume-button"
+                >
+                    Currículo
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Button -->
+
+            <button
+                id="menu-button"
+                class="md:hidden text-greenCustom text-2xl"
+                aria-label="Abrir menu"
+            >
+                ☰
+            </button>
+
+        </nav>
+
+
+        <!-- Mobile Menu -->
+
+        <div
+            id="mobile-menu"
+            class="hidden md:hidden bg-navyLight border-t border-slate-700"
+        >
+
+            <div class="flex flex-col px-6 py-6 gap-5">
+
+                <a href="#sobre" class="mobile-link">
+                    01. Sobre
+                </a>
+
+                <a href="#habilidades" class="mobile-link">
+                    02. Habilidades
+                </a>
+
+                <a href="#experiencia" class="mobile-link">
+                    03. Experiência
+                </a>
+
+                <a href="#projetos" class="mobile-link">
+                    04. Projetos
+                </a>
+
+                <a href="#contato" class="mobile-link">
+                    05. Contato
+                </a>
+
+                <a
+                    href="assets/cv.pdf"
+                    target="_blank"
+                    class="resume-button text-center"
+                >
+                    Currículo
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         REDES SOCIAIS LATERAIS
+    ========================== -->
+
+    <div class="social-sidebar hidden lg:flex">
+
+        <a
+            href="https://github.com/"
+            target="_blank"
+            aria-label="GitHub"
+        >
+            GitHub
+        </a>
+
+        <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            aria-label="LinkedIn"
+        >
+            LinkedIn
+        </a>
+
+        <div class="social-line"></div>
+
+    </div>
+
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main class="max-w-7xl mx-auto px-6 lg:px-24">
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section
+            id="inicio"
+            class="min-h-screen flex items-center pt-24"
+        >
+
+            <div class="max-w-4xl">
+
+                <p class="font-code text-greenCustom mb-5 hero-animation">
+                    Olá, meu nome é
+                </p>
+
+                <h1
+                    class="text-5xl sm:text-6xl lg:text-8xl font-bold text-lightCustom leading-tight hero-animation"
+                >
+                    André Cararo
+                    <br>
+
+                    <span class="text-slateCustom">
+                        Lowcke.
+                    </span>
+                </h1>
+
+                <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slateCustom mt-5 hero-animation"
+                >
+                    Desenvolvedor Java & Web.
+                </h2>
+
+                <p
+                    class="max-w-2xl text-slateCustom text-lg leading-8 mt-8 hero-animation"
+                >
+                    Desenvolvedor focado na criação de aplicações modernas,
+                    sistemas web e soluções utilizando Java, JavaScript,
+                    bancos de dados e tecnologias de inteligência artificial.
+                </p>
+
+
+                <div class="flex flex-wrap gap-4 mt-10 hero-animation">
+
+                    <a
+                        href="#projetos"
+                        class="primary-button"
+                    >
+                        Ver meus projetos
+                    </a>
+
+                    <a
+                        href="#contato"
+                        class="secondary-button"
+                    >
+                        Entre em contato
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SOBRE
+        ========================== -->
+
+        <section
+            id="sobre"
+            class="section-spacing"
+        >
+
+            <div class="section-title">
+
+                <span>01.</span>
+
+                <h2>
+                    Sobre mim
+                </h2>
+
+            </div>
+
+
+            <div class="grid lg:grid-cols-3 gap-12">
+
+                <div class="lg:col-span-2">
+
+                    <p class="text-slateCustom leading-8 mb-5">
+                        Sou desenvolvedor com formação técnica em
+                        Desenvolvimento de Sistemas e atualmente estou
+                        aprofundando meus conhecimentos em tecnologia,
+                        desenvolvimento de software e inteligência artificial.
+                    </p>
+
+                    <p class="text-slateCustom leading-8 mb-5">
+                        Tenho experiência prática com Java, MySQL,
+                        desenvolvimento de sistemas desktop e web,
+                        APIs, interfaces e aplicações orientadas a banco
+                        de dados.
+                    </p>
+
+                    <p class="text-slateCustom leading-8">
+                        Meu objetivo é unir desenvolvimento de software,
+                        automação, tecnologia industrial e inteligência
+                        artificial para criar soluções úteis e eficientes.
+                    </p>
+
+                </div>
+
+
+                <!-- Foto -->
+
+                <div class="flex justify-center">
+
+                    <div class="profile-container">
+
+                        <img
+                            src="assets/img/perfil.jpg"
+                            alt="Foto de André Cararo Lowcke"
+                            class="profile-image"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             HABILIDADES
+        ========================== -->
+
+        <section
+            id="habilidades"
+            class="section-spacing"
+        >
+
+            <div class="section-title">
+
+                <span>02.</span>
+
+                <h2>
+                    Habilidades
+                </h2>
+
+            </div>
+
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+
+                <!-- Java -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        ☕
+                    </div>
+
+                    <h3>
+                        Java
+                    </h3>
+
+                    <p>
+                        Desenvolvimento de aplicações,
+                        orientação a objetos, APIs e sistemas.
+                    </p>
+
+                </div>
+
+
+                <!-- Web -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        &lt;/&gt;
+                    </div>
+
+                    <h3>
+                        Web
+                    </h3>
+
+                    <p>
+                        HTML, CSS, JavaScript,
+                        Tailwind CSS e interfaces responsivas.
+                    </p>
+
+                </div>
+
+
+                <!-- Banco -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        DB
+                    </div>
+
+                    <h3>
+                        Banco de Dados
+                    </h3>
+
+                    <p>
+                        MySQL, SQL, modelagem e integração
+                        com aplicações.
+                    </p>
+
+                </div>
+
+
+                <!-- IA -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        AI
+                    </div>
+
+                    <h3>
+                        Inteligência Artificial
+                    </h3>
+
+                    <p>
+                        Interesse e desenvolvimento de soluções
+                        utilizando IA generativa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tecnologias -->
+
+            <div class="mt-12">
+
+                <p class="font-code text-greenCustom mb-5">
+                    Tecnologias
+                </p>
+
+                <div class="flex flex-wrap gap-3">
+
+                    <span class="tech-tag">Java</span>
+
+                    <span class="tech-tag">Spring Boot</span>
+
+                    <span class="tech-tag">JavaScript</span>
+
+                    <span class="tech-tag">HTML5</span>
+
+                    <span class="tech-tag">CSS3</span>
+
+                    <span class="tech-tag">Tailwind CSS</span>
+
+                    <span class="tech-tag">MySQL</span>
+
+                    <span class="tech-tag">Git</span>
+
+                    <span class="tech-tag">GitHub</span>
+
+                    <span class="tech-tag">REST API</span>
+
+                    <span class="tech-tag">JPA</span>
+
+                    <span class="tech-tag">Hibernate</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             EXPERIÊNCIA
+        ========================== -->
+
+        <section
+            id="experiencia"
+            class="section-spacing"
+        >
+
+            <div class="section-title">
+
+                <span>03.</span>
+
+                <h2>
+                    Experiência
+                </h2>
+
+            </div>
+
+
+            <div class="experience-container">
+
+
+                <!-- Item -->
+
+                <div class="experience-item">
+
+                    <div class="experience-date">
+                        Desenvolvimento
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Desenvolvedor Java
+                        </h3>
+
+                        <p class="experience-company">
+                            Projetos pessoais e acadêmicos
+                        </p>
+
+                        <p class="text-slateCustom leading-7 mt-4">
+                            Desenvolvimento de aplicações utilizando
+                            Java, orientação a objetos, MySQL, JPA,
+                            Hibernate e interfaces gráficas.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mt-4">
+
+                            <span class="mini-tag">Java</span>
+                            <span class="mini-tag">JPA</span>
+                            <span class="mini-tag">MySQL</span>
+                            <span class="mini-tag">Swing</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Item -->
+
+                <div class="experience-item">
+
+                    <div class="experience-date">
+                        Desenvolvimento Web
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Desenvolvedor Web
+                        </h3>
+
+                        <p class="experience-company">
+                            Projetos independentes
+                        </p>
+
+                        <p class="text-slateCustom leading-7 mt-4">
+                            Criação de aplicações web responsivas,
+                            páginas comerciais, sistemas de cadastro
+                            e interfaces utilizando tecnologias modernas.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mt-4">
+
+                            <span class="mini-tag">HTML</span>
+                            <span class="mini-tag">CSS</span>
+                            <span class="mini-tag">JavaScript</span>
+                            <span class="mini-tag">Tailwind</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Item -->
+
+                <div class="experience-item">
+
+                    <div class="experience-date">
+                        Tecnologia
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Automação & Tecnologia Industrial
+                        </h3>
+
+                        <p class="experience-company">
+                            Experiência profissional
+                        </p>
+
+                        <p class="text-slateCustom leading-7 mt-4">
+                            Experiência prática com eletricidade,
+                            manutenção e tecnologia aplicada ao
+                            ambiente industrial.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mt-4">
+
+                            <span class="mini-tag">Automação</span>
+                            <span class="mini-tag">Elétrica</span>
+                            <span class="mini-tag">Indústria</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROJETOS
+        ========================== -->
+
+        <section
+            id="projetos"
+            class="section-spacing"
+        >
+
+            <div class="section-title">
+
+                <span>04.</span>
+
+                <h2>
+                    Projetos
+                </h2>
+
+            </div>
+
+
+            <p class="text-slateCustom mb-10 max-w-2xl">
+                Alguns projetos que demonstram meus conhecimentos
+                em desenvolvimento de software e aplicações web.
+            </p>
+
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+
+                <!-- Projeto 1 -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <span class="folder-icon">
+                            📁
+                        </span>
+
+                        <div class="flex gap-4">
+
+                            <a
+                                href="#"
+                                class="project-link"
+                                aria-label="GitHub do projeto"
+                            >
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        Sistema de Gestão Java
+                    </h3>
+
+                    <p>
+                        Sistema desenvolvido em Java para gerenciamento
+                        de informações, com banco de dados MySQL,
+                        cadastro, pesquisa, atualização e exclusão
+                        de registros.
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>JPA</span>
+                        <span>Swing</span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Projeto 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <span class="folder-icon">
+                            📁
+                        </span>
+
+                        <a
+                            href="#"
+                            class="project-link"
+                        >
+                            GitHub
+                        </a>
+
+                    </div>
+
+
+                    <h3>
+                        Plataforma Web
+                    </h3>
+
+                    <p>
+                        Aplicação web responsiva com autenticação,
+                        cadastro de usuários, páginas públicas,
+                        área administrativa e integração com API.
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Tailwind</span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Projeto 3 -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <span class="folder-icon">
+                            📁
+                        </span>
+
+                        <a
+                            href="#"
+                            class="project-link"
+                        >
+                            GitHub
+                        </a>
+
+                    </div>
+
+
+                    <h3>
+                        Sistema de Filmes
+                    </h3>
+
+                    <p>
+                        Aplicação Java com interface gráfica para
+                        cadastro e pesquisa de filmes, utilizando
+                        banco de dados MySQL.
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>Java</span>
+                        <span>Swing</span>
+                        <span>MySQL</span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Projeto 4 -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <span class="folder-icon">
+                            📁
+                        </span>
+
+                        <a
+                            href="#"
+                            class="project-link"
+                        >
+                            GitHub
+                        </a>
+
+                    </div>
+
+
+                    <h3>
+                        Projetos com IA
+                    </h3>
+
+                    <p>
+                        Experimentação e desenvolvimento de soluções
+                        utilizando inteligência artificial generativa
+                        para criação de conteúdo e automação.
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>IA</span>
+                        <span>JavaScript</span>
+                        <span>APIs</span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTATO
+        ========================== -->
+
+        <section
+            id="contato"
+            class="min-h-[70vh] flex items-center justify-center text-center"
+        >
+
+            <div class="max-w-2xl">
+
+                <p class="font-code text-greenCustom mb-5">
+                    05. Entre em contato
+                </p>
+
+                <h2 class="text-4xl sm:text-5xl font-bold text-lightCustom mb-6">
+                    Vamos conversar?
+                </h2>
+
+                <p class="text-slateCustom leading-8 mb-10">
+                    Estou aberto a oportunidades profissionais,
+                    projetos, desenvolvimento de sistemas e
+                    novas possibilidades na área de tecnologia.
+                </p>
+
+
+                <a
+                    href="mailto:seuemail@email.com"
+                    class="primary-button inline-block"
+                >
+                    Enviar mensagem
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="border-t border-slate-800">
+
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+
+            <p class="text-slateCustom text-sm">
+
+                Desenvolvido por
+                <span class="text-greenCustom">
+                    André Cararo Lowcke
+                </span>
+
+            </p>
+
+            <p class="text-slate-600 text-xs mt-2">
+
+                HTML · Tailwind CSS · JavaScript
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+```
